@@ -23,27 +23,27 @@ The workflow:
 
 ## Tasks  
 
-### 1. Histogram Computation (5 pts)  
+### 1. Histogram Computation 
 - Function input: path to an image.  
 - Output: one histogram for each RGB component.  
 - Bin count defined as a global constant (suggested: 8–16).  
 - Each histogram is normalized by total number of pixels.  
 - Result: **2D numpy matrix**, each dimension corresponds to bins for R/G/B values.  
 
-### 2. Average Histogram per Class (7 pts)  
+### 2. Average Histogram per Class 
 - Input: list of `(class, image_path)` pairs.  
 - Compute aggregated histogram for each class using `map` / `reduce`.  
 - Divide by number of images in the class to get average.  
 - Result: list of tuples `(class, average_histogram)` where histogram is a 2D numpy matrix.  
 
-### 3. Cosine Similarity (2 pts)  
+### 3. Cosine Similarity 
 - Compute cosine similarity between two histograms.  
 - Steps:  
   - Flatten histograms into 1D arrays.  
   - Use `map` / `reduce` to compute dot product and norms.  
 - Result: a single numeric similarity score.  
 
-### 4. Classifier (6 pts)  
+### 4. Classifier 
 - For each test image:  
   1. Compute its histogram.  
   2. Compare with average histograms of all classes using cosine similarity.  
